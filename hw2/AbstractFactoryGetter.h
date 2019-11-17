@@ -1,5 +1,7 @@
 #pragma once
 
+#include "TypeList.h"
+
 template <class UnitType>
 class FactoryUnit {
 protected:
