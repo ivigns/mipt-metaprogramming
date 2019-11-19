@@ -1,5 +1,7 @@
 #pragma once
 
+class EmptyType {};
+
 struct EmptyList {};
 
 template <class H, class... T>

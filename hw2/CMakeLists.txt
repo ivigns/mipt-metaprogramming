@@ -3,4 +3,4 @@ project(factory_generator)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(factory_generator main.cpp TypeList.h Utils.h AbstractFactoryGetter.h)
+add_executable(factory_generator main.cpp TypeList.h Util.h FactoryGetter.h GenHierarchy.h)
