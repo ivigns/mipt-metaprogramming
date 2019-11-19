@@ -14,7 +14,7 @@ public:
 
 template <class ProductList>
 class AbstractFactoryImpl
-    : public GenScatterHierarchy<ProductList, FactoryUnit>
+    : private GenScatterHierarchy<ProductList, FactoryUnit>
 {
 public:
     template <class Product>
