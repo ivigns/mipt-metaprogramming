@@ -18,9 +18,10 @@ class AbstractFactoryImpl
 {
 public:
     template <class Product>
-    std::shared_ptr<Product> Get() {
-        FactoryUnit<Product>* base = this;
-        Product* p = nullptr;
+    std::shared_ptr<typename FindBase<Product, ProductList>::Result> Get() {
+        using BaseProduct = typename FindBase<Product, ProductList>::Result;
+        FactoryUnit<BaseProduct>* base = this;
+        BaseProduct* p = nullptr;
         return base->DoGet(p);
     }
 };

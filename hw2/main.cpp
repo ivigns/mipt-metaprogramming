@@ -68,6 +68,7 @@ int main() {
     std::shared_ptr<Furniture::AbstractFactory> metalFactory1 = factoryGetter.GetFactory<MetalTable>();
     std::shared_ptr<Chair> metalChair1 = metalFactory1->Get<Chair>();
     std::shared_ptr<Table> metalTable1 = metalFactory1->Get<Table>();
+    std::shared_ptr<Chair> anotherMetalChair1 = metalFactory1->Get<MetalChair>();
     std::cout << "\n";
 
     std::shared_ptr<Furniture::AbstractFactory> metalFactory2 = factoryGetter.GetFactory<MetalChair>();
