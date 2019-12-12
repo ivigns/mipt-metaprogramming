@@ -7,7 +7,7 @@
 
 // For basic Functor
 
-int Add5(int& a) {
+int Add5(int& a, std::string) {
     return (a += 5) - 5;
 }
 
@@ -102,9 +102,9 @@ public:
 };
 
 int main() {
-    Functor<int, int&> functor(Add5);
+    Functor<int, int&, std::string> functor(Add5);
     int a = 5;
-    std::cout << functor(a) << " " << a << std::endl;
+    std::cout << functor(a, "not used") << " " << a << std::endl;
 
     VisitDispatcher<Writer, TypeList<XMLWriter, JsonWriter>, Shape, TypeList<Circle, Square>, std::string, void, double, double> dispatcher;
 

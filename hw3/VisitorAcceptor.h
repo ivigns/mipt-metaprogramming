@@ -103,7 +103,7 @@ public:
     std::string Visit(Square* square) override {
         return "<?xml version=\"" + std::to_string(xml_version_) + ".0\" encoding=\"UTF-8\"?>\n"
                "<shape>\n"
-               "    <type>circle</type>\n"
+               "    <type>square</type>\n"
                "    <side>" + std::to_string(square->GetSide()) + "</side>\n"
                "    <x>{}</x>\n"
                "    <y>{}</y>\n"
@@ -142,7 +142,7 @@ public:
         render_time_ = distribution(random_engine_);
         return "{\n"
                "    \"shape\": {\n"
-               "        \"type\": \"circle\"\n"
+               "        \"type\": \"square\"\n"
                "        \"side\": " + std::to_string(square->GetSide()) + "\n"
                "        \"x\": {}\n"
                "        \"y\": {}\n"
